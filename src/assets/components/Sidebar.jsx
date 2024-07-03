@@ -1,5 +1,9 @@
 function Sidebar() {
-  return <h1>Sidebar</h1>;
+  return <>
+    <div className="container max-w-1">
+
+    </div>
+  </>
 }
 
 export default Sidebar;

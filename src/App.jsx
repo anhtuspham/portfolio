@@ -1,5 +1,6 @@
-import Sidebar from "./assets/components/Sidebar";
 import Home from "./assets/pages/Home";
+import Sidebar from "./assets/components/Sidebar"
+
 
 function App() {
   return (
