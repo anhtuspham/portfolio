@@ -1,3 +1,33 @@
-.menuButton{
-    outline: none;
+.siteNavigation {
+  --aside-width: 300px;
+  --button-width: 40px;
+  max-width: calc(var(--aside-width) + var(--button-width));
+  padding: 10px var(--button-width) 10px 10px;
+}
+
+.sideBarButton {
+  width: var(--button-width);
+  right: 0;
+  background-color: #1a1a1a;
+}
+
+.navigation li a {
+  /* background: #aeb2b7; */
+  border-bottom: 1px solid #3c3c44;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sideBar:first-child {
+  top: calc(50% - 6px);
+}
+
+.sideBar {
+  top: 50%;
+}
+
+.sideBar:nth-child(3) {
+  top: calc(50% + 6px);
 }
