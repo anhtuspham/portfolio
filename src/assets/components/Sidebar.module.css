@@ -3,6 +3,13 @@
   --button-width: 40px;
   max-width: calc(var(--aside-width) + var(--button-width));
   padding: 10px var(--button-width) 10px 10px;
+  transition: transform .6s ease;
+}
+
+/* Animation close sidebar */
+
+.siteNavigation.sidebarIsNotOpen {
+  transform: translateX(calc(-100% + var(--button-width)));
 }
 
 .sideBarButton {
@@ -12,7 +19,6 @@
 }
 
 .navigation li a {
-  /* background: #aeb2b7; */
   border-bottom: 1px solid #3c3c44;
   padding: 15px;
   display: flex;
@@ -20,29 +26,41 @@
   gap: 20px;
 }
 
-.sideBar:first-child {
-  top: calc(50% - 6px);
-}
-
 .sideBar {
   top: 50%;
+  transition: transform .6s ease;
 }
 
-.sideBar:nth-child(2){
-  transform: translateX(1px);
+.sideBar:first-child {
+  top: calc(50% - 6px);
 }
 
 .sideBar:nth-child(3) {
   top: calc(50% + 6px);
 }
 
-.curve{
-  color: blue;
-  transform: translateY(-50%) rotate(-45deg) scale(1);
-  top: calc(50% - 2px);
+.sidebarIsOpen .sideBar:nth-child(2) {
+  transform: translateX(1px);
 }
 
-.curve:last-child{
+.sidebarIsOpen .sideBar:first-child,
+.sidebarIsOpen .sideBar:nth-child(3) {
+  -webkit-transform: translateY(-50%) scaleX(0);
+  transform: translateX(-50%) scaleX(0);
+}
+
+.sidebarIsNotOpen .sideBar:first-child,
+.sidebarIsNotOpen .sideBar:nth-child(3) {
+  transform: translateX(1%) scale(1);
+}
+
+.sidebarIsOpen .curve {
+  transform: translateY(-50%) rotate(-45deg) scale(1);
+  top: calc(50% - 2px);
+  transition: transform .6s ease;
+}
+
+.sidebarIsOpen .curve:last-child {
   transform: translateY(50%) rotate(45deg) scale(1);
   top: calc(50% + 2px);
 }
