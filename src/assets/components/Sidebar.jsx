@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 import logo from "./../logo.png";
-import styles from  "./Sidebar.module.css"
+import styles from "./Sidebar.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,9 +12,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
+  const [active, setActive] = useState(true);
+
+  function handleShowSideBar() {
+    setActive((isActive) => !isActive);
+  }
   return (
-    <nav className={`${styles.siteNavigation} h-full w-full top-10 fixed flex`}>
-      <div className="relative w-full bg-neutral-800"> 
+    <nav className={`${styles.siteNavigation} ${active ? 'flex' : 'hidden'} h-full w-full top-10 fixed`}>
+      <div className="relative w-full bg-neutral-800">
         <div className="p-2.5 bg-sky-900 flex justify-center rounded-l-lg rounded-tr-lg">
           <a href="/" className="w-20 block">
             <img src={logo} alt="logo" />
@@ -45,13 +52,25 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <button className={`absolute top-[86px] p-0 m-0 h-fit rounded-r focus:outline-none aspect-square ${styles.sideBarButton}`}>
-        <span className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}></span>
-        <span className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}></span>
-        <span className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}></span>
-        {/* <span className={`bg-white h-0.5	w-5 rounded-sm	block absolute ${styles.sideBar}`}></span>
-        <span className={`bg-white h-0.5	w-5 rounded-sm	block absolute ${styles.sideBar}`}></span> */}
-
+      <button
+        className={`absolute top-[86px] p-0 m-0 h-fit rounded-r focus:outline-none aspect-square ${styles.sideBarButton}`}
+        onClick={handleShowSideBar}
+      >
+        <span
+          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute scale-0 ${styles.sideBar}`}
+        ></span>
+        <span
+          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}
+        ></span>
+        <span
+          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute scale-0 ${styles.sideBar}`}
+        ></span>
+        <span
+          className={`bg-white h-0.5 w-[9px] left-3 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
+        ></span>
+        <span
+          className={`bg-white h-0.5 w-[9px] left-3 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
+        ></span>
       </button>
     </nav>
   );

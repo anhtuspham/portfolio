@@ -28,6 +28,21 @@
   top: 50%;
 }
 
+.sideBar:nth-child(2){
+  transform: translateX(1px);
+}
+
 .sideBar:nth-child(3) {
   top: calc(50% + 6px);
+}
+
+.curve{
+  color: blue;
+  transform: translateY(-50%) rotate(-45deg) scale(1);
+  top: calc(50% - 2px);
+}
+
+.curve:last-child{
+  transform: translateY(50%) rotate(45deg) scale(1);
+  top: calc(50% + 2px);
 }
