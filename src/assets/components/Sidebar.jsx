@@ -53,7 +53,7 @@ function Sidebar() {
         </ul>
       </div>
       <button
-        className={`absolute top-[86px] p-0 m-0 h-fit rounded-r focus:outline-none aspect-square ${styles.sideBarButton}`}
+        className={`absolute top-[97px] p-0 m-0 h-fit rounded-r focus:outline-none aspect-square ${styles.sideBarButton}`}
         onClick={handleShowSideBar}
       >
         <span

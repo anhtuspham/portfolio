@@ -15,7 +15,6 @@ function Home() {
           {/* icon brand */}
           <div>
             <ul className="flex gap-2 text-3xl">
-
               {/* Github */}
               <li className="flex flex-col items-center text-transparent">
                 <a className="peer" href="/">
