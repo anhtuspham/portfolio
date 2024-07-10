@@ -3,7 +3,7 @@
   --button-width: 40px;
   max-width: calc(var(--aside-width) + var(--button-width));
   padding: 10px var(--button-width) 10px 10px;
-  transition: transform .6s ease;
+  transition: transform .7s ease;
 }
 
 /* Animation close sidebar */
@@ -28,7 +28,9 @@
 
 .sideBar {
   top: 50%;
-  transition: transform .6s ease;
+  transition: transform .9s ease;
+  transition-delay: .7s;
+  transform-origin: left center;
 }
 
 .sideBar:first-child {
@@ -39,28 +41,16 @@
   top: calc(50% + 6px);
 }
 
-.sidebarIsOpen .sideBar:nth-child(2) {
-  transform: translateX(1px);
-}
-
 .sidebarIsOpen .sideBar:first-child,
 .sidebarIsOpen .sideBar:nth-child(3) {
-  -webkit-transform: translateY(-50%) scaleX(0);
-  transform: translateX(-50%) scaleX(0);
-}
-
-.sidebarIsNotOpen .sideBar:first-child,
-.sidebarIsNotOpen .sideBar:nth-child(3) {
-  transform: translateX(1%) scale(1);
+  transform: translateY(-50%) scaleX(0);
 }
 
 .sidebarIsOpen .curve {
-  transform: translateY(-50%) rotate(-45deg) scale(1);
-  top: calc(50% - 2px);
-  transition: transform .6s ease;
+  transform: translateY(-50%) rotate(45deg) scale(1);
 }
 
 .sidebarIsOpen .curve:last-child {
-  transform: translateY(50%) rotate(45deg) scale(1);
-  top: calc(50% + 2px);
+  transform: translateY(50%) rotate(-45deg) scale(1);
 }
+
