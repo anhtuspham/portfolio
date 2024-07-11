@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-import logo from "./../logo.png";
-import styles from "./Sidebar.module.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -11,14 +8,21 @@ import {
   faFileContract,
 } from "@fortawesome/free-solid-svg-icons";
 
+import logo from "./../logo.png";
+import styles from "./Sidebar.module.css";
+
 function Sidebar() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
 
   function handleShowSideBar() {
     setActive((isActive) => !isActive);
   }
   return (
-    <nav className={`${styles.siteNavigation} ${active ? styles.sidebarIsOpen : styles.sidebarIsNotOpen} w-full top-9 bottom-9 fixed`}>
+    <nav
+      className={`${styles.siteNavigation} ${
+        active ? styles.sidebarIsOpen : styles.sidebarIsNotOpen
+      } w-full top-9 bottom-9 fixed`}
+    >
       <div className={`relative w-full h-full rounded-lg bg-neutral-800`}>
         <div className="p-2.5 bg-sky-900 flex justify-center rounded-l-lg rounded-tr-lg">
           <a href="/" className="w-20 block">
@@ -57,19 +61,19 @@ function Sidebar() {
         onClick={handleShowSideBar}
       >
         <span
-          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}
+          className={`bg-white h-0.5 w-5 left-2 rounded-sm block absolute ${styles.sideBar}`}
         ></span>
         <span
-          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}
+          className={`bg-white h-0.5 w-5 left-2 rounded-sm block absolute ${styles.sideBar}`}
         ></span>
         <span
-          className={`bg-white h-0.5 w-5 left-3 rounded-sm block absolute ${styles.sideBar}`}
+          className={`bg-white h-0.5 w-5 left-2 rounded-sm block absolute ${styles.sideBar}`}
         ></span>
         <span
-          className={`bg-white h-0.5 w-[9px] left-3 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
+          className={`bg-white h-0.5 w-[9px] left-2 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
         ></span>
         <span
-          className={`bg-white h-0.5 w-[9px] left-3 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
+          className={`bg-white h-0.5 w-[9px] left-2 rounded-sm block absolute ${styles.sideBar} ${styles.curve}`}
         ></span>
       </button>
     </nav>
