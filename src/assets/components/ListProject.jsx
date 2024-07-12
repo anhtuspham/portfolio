@@ -11,11 +11,11 @@ export default function ListProject({
   children,
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-1">
       <div className="aspect-[4/3] w-full">
         <img className="w-full h-full object-cover object-center" src={imgProject} alt="image-project"/>
       </div>
-      <h2>{title}</h2>
+      <h2 className="text-center font-bold text-lg mb-1">{title}</h2>
       {children}
       <div className="flex justify-center gap-5">
         <LinkButton

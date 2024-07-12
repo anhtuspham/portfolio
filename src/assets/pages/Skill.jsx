@@ -12,13 +12,13 @@ function Skill() {
         <Board>
           <div>
             <List title="Programming languages">
-              <p>1</p>
-              <p>1</p>
-              <p>1</p>
+              <p>HTML, CSS</p>
+              <p>Javascript</p>
             </List>
             <List title="Framework & platforms">
-              <p>React</p>
-              <p>Next</p>
+              <p>ReactJS, NodeJS</p>
+              <p>RestfulAPI/JSON</p>
+              <p>Firebase</p>
             </List>
           </div>
         </Board>
