@@ -1,6 +1,7 @@
 import Home from "./assets/pages/Home";
 import Sidebar from "./assets/components/Sidebar"
 import About from "./assets/pages/About";
+import Skill from "./assets/pages/Skill";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Sidebar />
       <Home />
       <About />
+      <Skill />
     </>
   );
 }

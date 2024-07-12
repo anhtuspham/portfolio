@@ -13,7 +13,7 @@ import cv from "./../images/PhamAnhTu-Intership-CV.pdf";
 
 function About() {
   return (
-    <div className="backgroundColor text-black">
+    <div>
       {/* Header */}
       <div className="uppercase tracking-wider py-4 mb-10 bg-white text-slate-400 text-4xl text-center">
         About me
@@ -45,7 +45,7 @@ function About() {
           <div className="my-4 max-w-28">
             <a className="p-2.5 bg-teal-700 flex items-center justify-center gap-2" href={cv} download>
               <FontAwesomeIcon icon={faDownload}/>
-              <h3 className="text-sm">My CV</h3>
+              <h3 className="text-sm text-white">My CV</h3>
             </a>
           </div>
         </div>
