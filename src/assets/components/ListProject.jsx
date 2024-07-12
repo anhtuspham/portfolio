@@ -3,9 +3,18 @@ import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 
 import LinkButton from "./LinkButton";
 
-export default function ListProject({ title, linkGithub, linkDemo, children }) {
+export default function ListProject({
+  title,
+  linkGithub,
+  linkDemo,
+  imgProject,
+  children,
+}) {
   return (
     <div className="flex flex-col gap-3">
+      <div className="aspect-[4/3] w-full">
+        <img className="w-full h-full object-cover object-center" src={imgProject} alt="image-project"/>
+      </div>
       <h2>{title}</h2>
       {children}
       <div className="flex justify-center gap-5">
