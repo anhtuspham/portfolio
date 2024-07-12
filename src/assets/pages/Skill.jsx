@@ -1,13 +1,13 @@
 import Board from "../components/Board";
+import Header from "../components/Header";
 import List from "../components/List";
 
 function Skill() {
   return (
-    <div>
+    <>
       {/* Header */}
-      <div className="uppercase tracking-wider py-4 mb-10 bg-white text-slate-400 text-4xl text-center">
-        Skill
-      </div>
+      <Header title="Skill" />
+
       <div className="flex w-3/5 mx-auto gap-5 mb-10">
         <Board>
           <div>
@@ -49,7 +49,7 @@ function Skill() {
           </List>
         </Board>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,62 @@
+.siteNavigation {
+  --aside-width: 300px;
+  --button-width: 40px;
+  max-width: calc(var(--aside-width) + var(--button-width));
+  padding: 10px var(--button-width) 10px 10px;
+  transition: transform .7s ease;
+}
+
+/* Animation close sidebar */
+
+.siteNavigation.sidebarIsNotOpen {
+  transform: translateX(calc(-100% + var(--button-width)));
+}
+
+.sideBarButton {
+  width: var(--button-width);
+  right: 0;
+  background-color: #1a1a1a;
+}
+
+.navigation li a {
+  border-bottom: 1px solid #3c3c44;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sideBar {
+  top: 50%;
+  transition: transform .9s ease;
+  transform-origin: left center;
+}
+
+.sideBar:first-child {
+  top: calc(50% - 6px);
+}
+
+.sideBar:nth-child(3) {
+  top: calc(50% + 6px);
+}
+
+.sidebarIsNotOpen .sideBar:first-child, .sidebarIsNotOpen .sideBar:nth-child(3){
+  transition-delay: .9s;
+}
+
+.sidebarIsOpen .sideBar:first-child,
+.sidebarIsOpen .sideBar:nth-child(3) {
+  transform: translateY(-50%) scaleX(0);
+  transition-delay: .4s;
+}
+
+.sidebarIsOpen .curve {
+  transform: translateY(-50%) rotate(45deg) scale(1);
+  transition-delay: 1.2s;
+}
+
+.sidebarIsOpen .curve:last-child {
+  transform: translateY(50%) rotate(-45deg) scale(1);
+  transition-delay: 1.2s;
+}
+

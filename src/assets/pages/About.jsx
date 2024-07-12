@@ -3,21 +3,21 @@ import {
   faLocationDot,
   faPhone,
   faEnvelope,
-  faDownload
+  faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./About.module.css";
 import image from "./../images/test.jpg";
 import cv from "./../images/PhamAnhTu-Intership-CV.pdf";
+import Header from "../components/Header";
+import LinkButton from "../components/LinkButton";
 
 function About() {
   return (
-    <div>
+    <>
       {/* Header */}
-      <div className="uppercase tracking-wider py-4 mb-10 bg-white text-slate-400 text-4xl text-center">
-        About me
-      </div>
+      <Header title="About" />
 
       {/* Content */}
       <div className="flex w-3/5 mx-auto gap-5 mb-10">
@@ -43,10 +43,13 @@ function About() {
             Ipsum
           </p>
           <div className="my-4 max-w-28">
-            <a className="p-2.5 bg-teal-700 flex items-center justify-center gap-2" href={cv} download>
-              <FontAwesomeIcon icon={faDownload}/>
-              <h3 className="text-sm text-white">My CV</h3>
-            </a>
+            <LinkButton
+              name="My CV"
+              srcIcon={faDownload}
+              linkForward={cv}
+              canDownload={true}
+              isForward={false}
+            />
           </div>
         </div>
         <div className="bg-white p-4 w-3/12 h-full rounded-md">
@@ -84,7 +87,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
