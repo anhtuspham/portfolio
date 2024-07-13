@@ -1,0 +1,8 @@
+.element{
+    transition: .3s ease;
+}
+
+.element:hover{
+    transform: scale(1.05);
+    box-shadow: 0 1.15px 3.25px 0 rgb(0 0 0 / 0.2), 0 1.15px 2.1px -1.05px rgb(0 0 0 / 0.1);
+}

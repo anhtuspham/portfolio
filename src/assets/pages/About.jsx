@@ -21,12 +21,12 @@ function About() {
 
       {/* Content */}
       <div className="flex w-3/5 mx-auto gap-5 mb-10">
-        <div className="bg-white p-4 w-3/12 rounded-md h-max">
+        <div className="bg-white p-4 w-3/12 rounded-md h-max shadow-md">
           <div>
             <img className="max-w-full aspect-square" src={image} />
           </div>
         </div>
-        <div className="bg-white w-6/12 p-4 rounded-md">
+        <div className="bg-white w-6/12 p-4 rounded-md shadow-md">
           <div className="uppercase pb-5 text-2xl">Summary</div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -52,7 +52,7 @@ function About() {
             />
           </div>
         </div>
-        <div className="bg-white p-4 w-3/12 h-full rounded-md">
+        <div className="bg-white p-4 w-3/12 h-full rounded-md shadow-md">
           <div className="">
             <div className="uppercase my-4 text-2xl">Contact info</div>
 
