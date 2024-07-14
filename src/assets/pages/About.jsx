@@ -16,7 +16,7 @@ import LinkButton from "../components/LinkButton";
 function About() {
   return (
     <>
-      {/* Header */}
+      <div id="about">{/* Header */}
       <Header title="About" />
 
       {/* Content */}
@@ -29,18 +29,10 @@ function About() {
         <div className="bg-white w-6/12 p-4 rounded-md shadow-md">
           <div className="uppercase pb-5 text-2xl">Summary</div>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </p>
-          <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum
+            I'm Pham Anh Tu, a young and energetic intern developer eager to
+            learn. I have experience working with JavaScript and ReactJS through
+            school projects and personal projects. I am passionate about
+            learning new languages and technologies.
           </p>
           <div className="my-4 max-w-28">
             <LinkButton
@@ -64,7 +56,7 @@ function About() {
                 </li>
                 <li className={`${styles.addressLine}`}>
                   <FontAwesomeIcon className="absolute" icon={faPhone} />
-                  <p className="pl-6">+84 395 514 111</p>
+                  <p className="pl-6">+84 395 514 138</p>
                 </li>
                 <li className={`${styles.addressLine}`}>
                   <FontAwesomeIcon className="absolute" icon={faEnvelope} />
@@ -86,7 +78,7 @@ function About() {
             </address>
           </div>
         </div>
-      </div>
+      </div></div>
     </>
   );
 }

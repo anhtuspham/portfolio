@@ -31,25 +31,25 @@ function Sidebar() {
         </div>
         <ul className={`${styles.navigation}`}>
           <li>
-            <a href="/">
+            <a href="#home">
               <FontAwesomeIcon icon={faHouse} />
               <h2>Home</h2>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="#about">
               <FontAwesomeIcon icon={faUser} />
               <h2>About</h2>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="#skill">
               <FontAwesomeIcon icon={faCompassDrafting} />
               <h2>Skill</h2>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="#project">
               <FontAwesomeIcon icon={faFileContract} />
               <h2>Project</h2>
             </a>

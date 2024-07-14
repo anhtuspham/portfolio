@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   return (
     <>
-      <div className="bg-emerald-500 h-full w-full pt-36 pb-8">
+      <div id="home" className="bg-emerald-500 h-full w-full pt-36 pb-8">
         <div className="max-w-4xl mx-auto flex flex-col items-center uppercase gap-3 text-white">
           <h1 className="text-6xl">Hi, there</h1>
           <h1 className="text-[50px]">I'm Anh Tu Pham</h1>

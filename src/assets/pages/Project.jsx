@@ -7,7 +7,7 @@ import boilcms from "../images/boilcms.png";
 export default function Project() {
   return (
     <>
-      <Header title="Project" />
+      <div id="project"><Header title="Project" />
       <div className="flex w-3/5 mx-auto gap-5 mb-10 justify-center ">
         <Board>
           <ListProject
@@ -68,7 +68,7 @@ export default function Project() {
             </p>
           </ListProject>
         </Board>
-      </div>
+      </div></div>
     </>
   );
 }
