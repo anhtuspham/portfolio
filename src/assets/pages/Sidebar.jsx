@@ -10,12 +10,18 @@ import {
 
 import logo from "./../logo.png";
 import styles from "./Sidebar.module.css";
+import MenuItem from "../components/MenuItem";
 
 function Sidebar() {
   const [active, setActive] = useState(false);
+  const [activeMenuItem, setActiveMenuItem] = useState("home");
 
   function handleShowSideBar() {
     setActive((isActive) => !isActive);
+  }
+
+  function handleSetActiveMenuItem(item) {
+    setActiveMenuItem(item);
   }
   return (
     <nav
@@ -30,14 +36,38 @@ function Sidebar() {
           </a>
         </div>
         <ul className={`${styles.navigation}`}>
-          <li>
-            <a href="#home">
+          {/* <li className={`${activeMenuItem === 'home' ? 'bg-slate-800' : 'bg-slate-900'}`}>
+            <a href="#home" onClick={() => handleSetActiveMenuItem('home')}>
               <FontAwesomeIcon icon={faHouse} />
               <h2>Home</h2>
             </a>
-          </li>
-          <li>
-            <a href="#about">
+          </li> */}
+          <MenuItem
+            menuItem="home"
+            currentActiveMenuItem={activeMenuItem}
+            srcIcon={faHouse}
+            handleOnClick={() => handleSetActiveMenuItem("home")}
+          />
+          <MenuItem
+            menuItem="about"
+            currentActiveMenuItem={activeMenuItem}
+            srcIcon={faHouse}
+            handleOnClick={() => handleSetActiveMenuItem("about")}
+          />
+          <MenuItem
+            menuItem="skill"
+            currentActiveMenuItem={activeMenuItem}
+            srcIcon={faHouse}
+            handleOnClick={() => handleSetActiveMenuItem("skill")}
+          />
+          <MenuItem
+            menuItem="project"
+            currentActiveMenuItem={activeMenuItem}
+            srcIcon={faHouse}
+            handleOnClick={() => handleSetActiveMenuItem("project")}
+          />
+          {/* <li>
+            <a href="#about" onClick={() => handleSetActiveMenuItem('about')}>
               <FontAwesomeIcon icon={faUser} />
               <h2>About</h2>
             </a>
@@ -53,7 +83,7 @@ function Sidebar() {
               <FontAwesomeIcon icon={faFileContract} />
               <h2>Project</h2>
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <button
