@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faHouse,
@@ -20,7 +19,7 @@ function Sidebar() {
     setActive((isActive) => !isActive);
   }
 
-  function handleSetActiveMenuItem(item) {
+  function handleSetActiveMenu(item) {
     setActiveMenuItem(item);
   }
   return (
@@ -36,54 +35,30 @@ function Sidebar() {
           </a>
         </div>
         <ul className={`${styles.navigation}`}>
-          {/* <li className={`${activeMenuItem === 'home' ? 'bg-slate-800' : 'bg-slate-900'}`}>
-            <a href="#home" onClick={() => handleSetActiveMenuItem('home')}>
-              <FontAwesomeIcon icon={faHouse} />
-              <h2>Home</h2>
-            </a>
-          </li> */}
           <MenuItem
             menuItem="home"
             currentActiveMenuItem={activeMenuItem}
             srcIcon={faHouse}
-            handleOnClick={() => handleSetActiveMenuItem("home")}
+            handleOnClick={() => handleSetActiveMenu("home")}
           />
           <MenuItem
             menuItem="about"
             currentActiveMenuItem={activeMenuItem}
-            srcIcon={faHouse}
-            handleOnClick={() => handleSetActiveMenuItem("about")}
+            srcIcon={faUser}
+            handleOnClick={() => handleSetActiveMenu("about")}
           />
           <MenuItem
             menuItem="skill"
             currentActiveMenuItem={activeMenuItem}
-            srcIcon={faHouse}
-            handleOnClick={() => handleSetActiveMenuItem("skill")}
+            srcIcon={faCompassDrafting}
+            handleOnClick={() => handleSetActiveMenu("skill")}
           />
           <MenuItem
             menuItem="project"
             currentActiveMenuItem={activeMenuItem}
-            srcIcon={faHouse}
-            handleOnClick={() => handleSetActiveMenuItem("project")}
+            srcIcon={faFileContract}
+            handleOnClick={() => handleSetActiveMenu("project")}
           />
-          {/* <li>
-            <a href="#about" onClick={() => handleSetActiveMenuItem('about')}>
-              <FontAwesomeIcon icon={faUser} />
-              <h2>About</h2>
-            </a>
-          </li>
-          <li>
-            <a href="#skill">
-              <FontAwesomeIcon icon={faCompassDrafting} />
-              <h2>Skill</h2>
-            </a>
-          </li>
-          <li>
-            <a href="#project">
-              <FontAwesomeIcon icon={faFileContract} />
-              <h2>Project</h2>
-            </a>
-          </li> */}
         </ul>
       </div>
       <button

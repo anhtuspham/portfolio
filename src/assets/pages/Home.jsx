@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import BrandIcon from "../components/BrandIcon";
 
 function Home() {
   return (
@@ -15,29 +16,9 @@ function Home() {
           {/* icon brand */}
           <div>
             <ul className="flex gap-2 text-3xl">
-              {/* Github */}
-              <li className="flex flex-col items-center text-transparent">
-                <a className="peer" href="/">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <p className="text-sm peer-hover:text-white">Github</p>
-              </li>
-
-              {/* Linkedin */}
-              <li className="flex flex-col items-center text-transparent">
-                <a className="peer" href="/">
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-                <p className="text-sm peer-hover:text-white">Linkedin</p>
-              </li>
-
-              {/* Email */}
-              <li className="flex flex-col items-center text-transparent">
-                <a className="peer" href="/">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </a>
-                <p className="text-sm peer-hover:text-white">Email</p>
-              </li>
+              <BrandIcon srcIcon={faGithub} />
+              <BrandIcon srcIcon={faLinkedin} />
+              <BrandIcon srcIcon={faEnvelope} />
             </ul>
           </div>
         </div>

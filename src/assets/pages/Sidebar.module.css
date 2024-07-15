@@ -3,7 +3,7 @@
   --button-width: 40px;
   max-width: calc(var(--aside-width) + var(--button-width));
   padding: 10px var(--button-width) 10px 10px;
-  transition: transform .8s ease;
+  transition: transform .7s ease;
 }
 
 /* Animation close sidebar */
@@ -28,7 +28,7 @@
 
 .sideBar {
   top: 50%;
-  transition: transform .8s ease;
+  transition: transform .7s ease;
   transform-origin: left center;
 }
 
@@ -41,22 +41,22 @@
 }
 
 .sidebarIsNotOpen .sideBar:first-child, .sidebarIsNotOpen .sideBar:nth-child(3){
-  transition-delay: .8s;
+  transition-delay: .7s;
 }
 
 .sidebarIsOpen .sideBar:first-child,
 .sidebarIsOpen .sideBar:nth-child(3) {
   transform: translateY(-50%) scaleX(0);
-  transition-delay: .3s;
+  transition-delay: .2s;
 }
 
 .sidebarIsOpen .curve {
   transform: translateY(-50%) rotate(45deg) scale(1);
-  transition-delay: 1s;
+  transition-delay: .7s;
 }
 
 .sidebarIsOpen .curve:last-child {
   transform: translateY(50%) rotate(-45deg) scale(1);
-  transition-delay: 1s;
+  transition-delay: .7s;
 }
 

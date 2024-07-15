@@ -10,10 +10,10 @@ export default function MenuItem({
     <li>
       <a
         href={`#${menuItem}`}
-        onClick={handleOnClick}
         className={`${
           currentActiveMenuItem === menuItem ? "bg-slate-800 text-blue-600" : ""
         }`}
+        onClick={handleOnClick}
       >
         <FontAwesomeIcon icon={srcIcon} />
         <h2 className="capitalize">{menuItem}</h2>
