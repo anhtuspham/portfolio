@@ -1,11 +1,11 @@
-import Board from "../components/Board";
-import Header from "../components/Header";
-import List from "../components/List";
+import Board from "../../components/Board";
+import Header from "../../components/Header";
+import List from "../../components/List";
 
 function Skill() {
   return (
     <>
-      <div id="skill">
+      <section id="skill">
         {/* Header */}
         <Header title="Skill" />
 
@@ -50,7 +50,7 @@ function Skill() {
             </List>
           </Board>
         </div>
-      </div>
+      </section>
     </>
   );
 }

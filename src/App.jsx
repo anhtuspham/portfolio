@@ -1,8 +1,8 @@
-import Home from "./assets/pages/Home";
-import Sidebar from "./assets/pages/Sidebar"
-import About from "./assets/pages/About";
-import Skill from "./assets/pages/Skill";
-import Project from "./assets/pages/Project";
+import Home from "./assets/pages/Home/Home";
+import Sidebar from "./assets/pages/Sidebar/Sidebar"
+import About from "./assets/pages/About/About";
+import Skill from "./assets/pages/Skill/Skill";
+import Project from "./assets/pages/Project/Project";
 
 
 function App() {

@@ -7,9 +7,9 @@ import {
   faFileContract,
 } from "@fortawesome/free-solid-svg-icons";
 
-import logo from "./../logo.png";
+import logo from "./../../logo.png";
 import styles from "./Sidebar.module.css";
-import MenuItem from "../components/MenuItem";
+import MenuItem from "../../components/MenuItem";
 
 function Sidebar() {
   const [active, setActive] = useState(false);
