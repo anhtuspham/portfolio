@@ -6,6 +6,12 @@ export default function MenuItem({
   srcIcon,
   handleOnClick,
 }) {
+  const handleClick = (e) => {
+    e.preventDefault();
+    document.getElementById(menuItem).scrollIntoView({behavior: 'smooth'})
+    handleOnClick(menuItem),
+    history.pushState(null, '', '')
+  }
   return (
     <li>
       <a
@@ -13,7 +19,7 @@ export default function MenuItem({
         className={`${
           currentActiveMenuItem === menuItem ? "bg-slate-800 text-blue-600" : ""
         }`}
-        onClick={handleOnClick}
+        onClick={handleClick}
       >
         <FontAwesomeIcon icon={srcIcon} />
         <h2 className="capitalize">{menuItem}</h2>

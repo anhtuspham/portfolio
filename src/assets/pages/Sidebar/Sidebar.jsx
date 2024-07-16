@@ -13,7 +13,9 @@ import MenuItem from "../../components/MenuItem";
 
 function Sidebar() {
   const [active, setActive] = useState(true);
-  const [activeMenuItem, setActiveMenuItem] = useState("home");
+  const [activeMenuItem, setActiveMenuItem] = useState(() => {
+    return localStorage.getItem("activeItemMenu") || "home";
+  });
 
   function handleShowSideBar() {
     setActive((isActive) => !isActive);
@@ -21,6 +23,7 @@ function Sidebar() {
 
   function handleSetActiveMenu(item) {
     setActiveMenuItem(item);
+    localStorage.setItem("activeItemMenu", item);
   }
 
   useEffect(() => {
@@ -35,7 +38,9 @@ function Sidebar() {
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveMenuItem(entry.target.id);
+          const id = entry.target.id;
+          setActiveMenuItem(id);
+          localStorage.setItem("activeItemMenu", id);
         }
       });
     };
@@ -47,6 +52,7 @@ function Sidebar() {
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
+
   return (
     <nav
       className={`${styles.siteNavigation} ${

@@ -16,12 +16,12 @@ import LinkButton from "../../components/LinkButton";
 function About() {
   return (
     <>
-      <section id="about">
+      <section id="about" className="pb-10">
         {/* Header */}
         <Header title="About" />
 
         {/* Content */}
-        <div className="flex w-3/5 mx-auto gap-5 mb-10">
+        <div className="flex w-3/5 mx-auto gap-5">
           <div className="bg-white p-4 w-3/12 rounded-md h-max shadow-md">
             <div>
               <img className="max-w-full aspect-square" src={image} />

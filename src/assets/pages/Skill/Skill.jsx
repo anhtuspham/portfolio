@@ -5,11 +5,11 @@ import List from "../../components/List";
 function Skill() {
   return (
     <>
-      <section id="skill">
+      <section id="skill" className="pb-10">
         {/* Header */}
         <Header title="Skill" />
 
-        <div className="flex w-3/5 mx-auto gap-5 mb-10">
+        <div className="flex w-3/5 mx-auto gap-5">
           <Board>
             <div>
               <List title="Programming languages">
