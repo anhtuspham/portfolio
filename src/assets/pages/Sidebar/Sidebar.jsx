@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   faUser,
@@ -12,7 +12,7 @@ import styles from "./Sidebar.module.css";
 import MenuItem from "../../components/MenuItem";
 
 function Sidebar() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const [activeMenuItem, setActiveMenuItem] = useState("home");
 
   function handleShowSideBar() {
@@ -22,6 +22,31 @@ function Sidebar() {
   function handleSetActiveMenu(item) {
     setActiveMenuItem(item);
   }
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px -100% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveMenuItem(entry.target.id);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
   return (
     <nav
       className={`${styles.siteNavigation} ${
