@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./BrandIcon.module.css";
 
-export default function BrandIcon({ srcIcon }) {
+export default function BrandIcon({ srcIcon, linkForward, brandName }) {
   return (
-    <li className="flex items-center">
-      <p className="text-sm peer-hover:text-white">Github</p>
-      <a className="peer" href="/">
+    <li className="flex mt-6 w-12 justify-center">
+      <a className={`${styles.iconBrand} relative`} href={linkForward} target="_blank">
         <FontAwesomeIcon icon={srcIcon} />
+        <span className={`${styles.textBrand}`}>{brandName}</span>
       </a>
     </li>
   );

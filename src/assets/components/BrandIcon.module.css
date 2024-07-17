@@ -1,0 +1,24 @@
+.textBrand{
+    text-transform: capitalize;
+    font-size: 14px;
+    position: absolute;
+    margin-left: -65px;
+    left: 50%;
+    transition: all .3s ease;
+    color: transparent;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+
+.iconBrand{
+    z-index: 1;
+}
+
+.iconBrand:hover .textBrand{
+    transform: translate(450%, -100%);
+    color: rgba(255, 255, 255);
+    width: 10px;
+    height: auto;
+    overflow: visible;
+}
