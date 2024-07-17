@@ -8,10 +8,10 @@ export default function MenuItem({
 }) {
   const handleClick = (e) => {
     e.preventDefault();
-    document.getElementById(menuItem).scrollIntoView({behavior: 'smooth'})
-    handleOnClick(menuItem),
-    history.pushState(null, '', '')
-  }
+    document.getElementById(menuItem).scrollIntoView({ behavior: "smooth" });
+    handleOnClick();
+    history.pushState(null, "", "");
+  };
   return (
     <li>
       <a

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import {
   faUser,
@@ -14,16 +14,12 @@ import MenuItem from "../../components/MenuItem";
 function Sidebar() {
   const [active, setActive] = useState(true);
   const [activeMenuItem, setActiveMenuItem] = useState(() => {
-    return localStorage.getItem("activeItemMenu") || "home";
+    return localStorage.getItem('menuItem') || 'home'
   });
+  const isScrolling = useRef(false)
 
   function handleShowSideBar() {
     setActive((isActive) => !isActive);
-  }
-
-  function handleSetActiveMenu(item) {
-    setActiveMenuItem(item);
-    localStorage.setItem("activeItemMenu", item);
   }
 
   useEffect(() => {
@@ -36,22 +32,35 @@ function Sidebar() {
     };
 
     const observerCallback = (entries) => {
+      if(isScrolling.current) return;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
           setActiveMenuItem(id);
-          localStorage.setItem("activeItemMenu", id);
+          localStorage.setItem('menuItem', id)
         }
       });
     };
+
     const observer = new IntersectionObserver(
       observerCallback,
       observerOptions
     );
+
     sections.forEach((section) => observer.observe(section));
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
+
+  function handleScrollingToMenuItem(menuItem){
+    isScrolling.current = true;
+
+    setActiveMenuItem(menuItem)
+    localStorage.setItem('menuItem',menuItem)
+    setTimeout(() => {
+      isScrolling.current = false
+    }, 500)
+  }
 
   return (
     <nav
@@ -70,25 +79,25 @@ function Sidebar() {
             menuItem="home"
             currentActiveMenuItem={activeMenuItem}
             srcIcon={faHouse}
-            handleOnClick={() => handleSetActiveMenu("home")}
+            handleOnClick={() => handleScrollingToMenuItem("home")}
           />
           <MenuItem
             menuItem="about"
             currentActiveMenuItem={activeMenuItem}
             srcIcon={faUser}
-            handleOnClick={() => handleSetActiveMenu("about")}
+            handleOnClick={() => handleScrollingToMenuItem("about")}
           />
           <MenuItem
             menuItem="skill"
             currentActiveMenuItem={activeMenuItem}
             srcIcon={faCompassDrafting}
-            handleOnClick={() => handleSetActiveMenu("skill")}
+            handleOnClick={() => handleScrollingToMenuItem("skill")}
           />
           <MenuItem
             menuItem="project"
             currentActiveMenuItem={activeMenuItem}
             srcIcon={faFileContract}
-            handleOnClick={() => handleSetActiveMenu("project")}
+            handleOnClick={() => handleScrollingToMenuItem("project")}
           />
         </ul>
       </div>
