@@ -10,7 +10,6 @@
 
   color-scheme: light dark;
   color: rgba(3, 3, 3, 0.87);
-  background-color: #f1f2f7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -83,4 +82,13 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#tsparticles {
+  position: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }

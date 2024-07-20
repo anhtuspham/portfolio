@@ -13,6 +13,11 @@
 
 .iconBrand{
     z-index: 1;
+    color: rgb(197, 197, 197);
+}
+
+.iconBrand:hover{
+    color: white;
 }
 
 .iconBrand:hover .textBrand{

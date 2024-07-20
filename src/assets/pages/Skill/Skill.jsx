@@ -5,7 +5,7 @@ import List from "../../components/List";
 function Skill() {
   return (
     <>
-      <section id="skill" className="pb-10">
+      <section id="skill" className="pb-10 bg-primary">
         {/* Header */}
         <Header title="Skill" />
 

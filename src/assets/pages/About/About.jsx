@@ -16,7 +16,7 @@ import LinkButton from "../../components/LinkButton";
 function About() {
   return (
     <>
-      <section id="about" className="pb-10">
+      <section id="about" className="pb-10 bg-primary">
         {/* Header */}
         <Header title="About" />
 

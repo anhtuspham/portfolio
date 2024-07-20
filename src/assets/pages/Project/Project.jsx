@@ -7,7 +7,7 @@ import boilcms from "../../images/boilcms.png";
 export default function Project() {
   return (
     <>
-      <section id="project" className="pb-10">
+      <section id="project" className="pb-10 bg-primary">
         <Header title="Project" />
         <div className="flex w-3/5 mx-auto gap-5 mb-10 justify-center ">
           <Board>
