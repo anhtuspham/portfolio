@@ -5,19 +5,22 @@ import BrandIcon from "../../components/BrandIcon";
 import banner from "./../../images/banner.png";
 
 import ParticlesContainer from "../../components/ParticlesContainer";
+import TypeWriter from "../../components/TypeWriter";
 
 function Home() {
   return (
     <>
+      <ParticlesContainer />
       <section
         id="home"
         className={` h-full w-full pt-36 pb-8 flex flex-wrap `}
       >
-        <ParticlesContainer />
-        <div className="max-w-4xl w-2/3 mx-auto flex flex-col items-center uppercase gap-2.5 text-white">
-          <h1 className="text-6xl">Hi, there</h1>
-          <h1 className="text-[50px]">I'm Anh Tu Pham</h1>
-          <p>Web developer</p>
+        <div className="max-w-4xl w-2/3 mx-auto flex flex-col items-center gap-2.5 text-white mt-12">
+          <h1 className="text-[40px] capitalize text-left">Hi, there</h1>
+          <h1 className="text-[42px] uppercase">I'm
+            <span className="text-fuchsia-600 ml-3 font-semibold">Anh Tu Pham</span>
+          </h1>
+          <TypeWriter speed="100" texts={['Front-end Developer', 'Back-end Developer']}/>
 
           {/* icon brand */}
           <div>

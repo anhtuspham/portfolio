@@ -22,7 +22,7 @@
 
 .iconBrand:hover .textBrand{
     transform: translate(450%, -100%);
-    color: rgba(255, 255, 255);
+    color: #e879f9;
     width: 10px;
     height: auto;
     overflow: visible;
