@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from './TypeWriter.module.css'
+import styles from "./TypeWriter.module.css";
 
 export default function TypeWriter({ speed, texts }) {
   const [displayText, setDisplayText] = useState("");
@@ -13,23 +13,29 @@ export default function TypeWriter({ speed, texts }) {
 
     if (isPause) {
       timer = setTimeout(() => {
+        // when clear all text then go to next text in texts
+        if (isDeleting) {
+          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        }
+
         setIsDeleting((prevState) => !prevState);
         setIsPause(false);
       }, speed * 5);
-    }
+    } else if (isDeleting) {
+      // delete text by text
 
-    else if (isDeleting) {
       timer = setTimeout(() => {
         setDisplayText((prevDisplayText) => {
           const newDisplayText = prevDisplayText.slice(0, -1);
           if (newDisplayText.length === 0) {
             setIsPause(true);
-            setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
           }
           return newDisplayText;
         });
       }, speed / 2);
     } else {
+      // add text by text
+
       timer = setTimeout(() => {
         setDisplayText((prevDisplayText) => {
           const newDisplayText = currentText.slice(
@@ -39,10 +45,11 @@ export default function TypeWriter({ speed, texts }) {
           if (newDisplayText.length === currentText.length) {
             setIsPause(true);
           }
-          return newDisplayText
+          return newDisplayText;
         });
       }, speed);
     }
+
     return () => clearTimeout(timer);
   }, [speed, texts, isPause, isDeleting, currentTextIndex, displayText]);
   return (

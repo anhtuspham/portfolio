@@ -20,7 +20,7 @@ function Home() {
           <h1 className="text-[42px] uppercase">I'm
             <span className="text-fuchsia-600 ml-3 font-semibold">Anh Tu Pham</span>
           </h1>
-          <TypeWriter speed="100" texts={['Front-end Developer', 'Back-end Developer']}/>
+          <TypeWriter speed="150" texts={['Front-end Developer', 'Back-end Developer', 'Intern Developer']}/>
 
           {/* icon brand */}
           <div>
