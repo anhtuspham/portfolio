@@ -20,7 +20,7 @@ export default function TypeWriter({ speed, texts }) {
 
         setIsDeleting((prevState) => !prevState);
         setIsPause(false);
-      }, speed * 5);
+      }, speed * 10);
     } else if (isDeleting) {
       // delete text by text
 
