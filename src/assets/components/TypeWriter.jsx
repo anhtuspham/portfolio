@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from './TypeWriter.module.css'
 
 export default function TypeWriter({ speed, texts }) {
   const [displayText, setDisplayText] = useState("");
@@ -45,8 +46,8 @@ export default function TypeWriter({ speed, texts }) {
     return () => clearTimeout(timer);
   }, [speed, texts, isPause, isDeleting, currentTextIndex, displayText]);
   return (
-    <div>
-      <span className="capitalize text-xl min-[27px]">{displayText}</span>
+    <div className={`${styles.typeWriter} min-h-8 `}>
+      <span className="capitalize text-xl">{displayText}</span>
     </div>
   );
 }
