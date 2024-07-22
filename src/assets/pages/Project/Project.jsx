@@ -58,10 +58,12 @@ export default function Project() {
               <p>Display product list</p>
               <p>Using Nodemailer to help user contact with admin</p>
               <p>
-                Conain full feature 1 ecommerce web: view products, select
+                Contain full feature 1 ecommerce web: view products, select
                 product quantity , choose product variations, purchase product,
                 and track order status
               </p>
+              <p>Implement JWT authentication for users.</p>
+              <p>Create API for CRUD operations on Products, Orders, Users, and Contacts</p>
               <p>User can reset, change their password through mail</p>
               <p>
                 Admins can manage all features of the project including images,
