@@ -18,24 +18,20 @@ export default function Project() {
               imgProject={cinematic}
             >
               <p>
-                A comprehensive movie discovery platform built with{" "}
-                <span className="font-semibold">
-                  HTML, CSS, Vanila Javascript
-                </span>
+                <span className="font-bold">Project Description</span>: A movie
+                website help user to find a favorite movie, review movie
               </p>
               <p>
-                Movie Detail: View Detailed information provided for each movie
-                including synopsis, cast, ratings, and reviews.
+                <span className="font-bold">Function</span>: Show movie details,
+                search movies by keyword, responsive design that scales based on
+                device width, log-in/sign-up form with smooth animation
+                transitions between states.
               </p>
               <p>
-                Search Functionality: Find movies by movie name keyword. Instant
-                search results help quickly locate desired movies
+                <span className="font-bold">Technologies</span>: HTML, CSS,
+                Javascript to design template, API: Fetch movie detail from OMDb
+                API
               </p>
-              <p>
-                Login/Sign-up form: Quickly transition between states with
-                smooth animation.
-              </p>
-              <p>Responsive: Scales up depending on device width.</p>
             </ListProject>
           </Board>
           <Board>
@@ -46,28 +42,31 @@ export default function Project() {
               imgProject={boilcms}
             >
               <p>
-                A fullstack ecommerce web application plaform built with{" "}
-                <span className="font-semibold">
-                  HTML, CSS, Vanila JS, Nodejs and MongoDB
-                </span>
+                <span className="font-bold">Project Description</span>: Built a
+                framework to quickly create e-commerce or blog platforms,
+                inspired by WordPress.
               </p>
               <p>
-                The ecommerce web application has two seperate interfaces: user
-                interface and admin interface
+                <span className="font-bold">Team size</span>: 2
               </p>
-              <p>Display product list</p>
-              <p>Using Nodemailer to help user contact with admin</p>
               <p>
-                Contain full feature 1 ecommerce web: view products, select
-                product quantity , choose product variations, purchase product,
-                and track order status
+                <span className="font-bold">Responsibilities</span>:
+                Collaborated with my team to plan and develop the project,
+                customized components for the admin to easily create new
+                products, orders, and users, built a contact page to connect
+                guests to the admin, implemented JWT authentication for users.
               </p>
-              <p>Implement JWT authentication for users.</p>
-              <p>Create API for CRUD operations on Products, Orders, Users, and Contacts</p>
-              <p>User can reset, change their password through mail</p>
               <p>
-                Admins can manage all features of the project including images,
-                products, text, users, revenue,...
+                <span className="font-bold">Functionality</span>: Log-in,
+                sign-up with email, view product details, purchase products,
+                contact the admin. Admin functions: revenue chart, manage all
+                details of the website (images, products, accounts, pages,
+                orders), and communicate with users.
+              </p>
+              <p>
+                <span className="font-bold">Technologies</span>: Front-end:
+                HTML/CSS, Vanilla Javascript, Webpack. Back-end: Nodejs,
+                Database: MongoDB
               </p>
             </ListProject>
           </Board>

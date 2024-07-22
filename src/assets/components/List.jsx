@@ -6,7 +6,7 @@ function List({ title, children }) {
       <h2 className="uppercase mb-1">{title}</h2>
       <ul>
         {Children.map(children, (child) => (
-          <li className="text-slate-500 ml-8 list-[circle]">{child}</li>
+          <li className="text-slate-600 ml-8 list-[circle]">{child}</li>
         ))}
       </ul>
     </div>
