@@ -13,11 +13,11 @@ function Home() {
       <ParticlesContainer />
       <section
         id="home"
-        className={` h-full w-full pt-36 pb-8 flex flex-wrap `}
+        className={`h-full w-full pt-36 pb-8 flex flex-wrap `}
       >
         <div className="max-w-4xl w-2/3 mx-auto flex flex-col items-center gap-2.5 text-white mt-12">
-          <h1 className="text-[40px] capitalize text-left">Hi, there</h1>
-          <h1 className="text-[42px] uppercase">I'm
+          <h1 className="text-[40px] capitalize text-left max-md:text-[30px]">Hi, there</h1>
+          <h1 className="text-[42px] uppercase max-md:text-[31px]">I'm
             <span className="text-fuchsia-600 ml-3 font-semibold">Anh Tu Pham</span>
           </h1>
           <TypeWriter speed="150" texts={['Front-end Developer', 'Back-end Developer', 'Intern Developer']}/>
@@ -43,7 +43,7 @@ function Home() {
             </ul>
           </div>
         </div>
-        <div className="w-1/3 max-h-96">
+        <div className="w-1/3 max-h-96 max-lg:max-w-full max-lg:w-full flex justify-center max-md:scale-75">
           <img className="h-full w-auto" src={banner} alt="home-banner" />
         </div>
       </section>

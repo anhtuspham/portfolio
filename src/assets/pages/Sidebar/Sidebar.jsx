@@ -66,7 +66,7 @@ function Sidebar() {
     <nav
       className={`${styles.siteNavigation} ${
         active ? styles.sidebarIsOpen : styles.sidebarIsNotOpen
-      } w-full top-9 bottom-9 fixed`}
+      } w-full top-9 bottom-9 fixed z-10`}
     >
       <div className={`relative w-full h-full rounded-lg bg-neutral-800`}>
         <div className="p-2.5 bg-sky-900 flex justify-center rounded-l-lg rounded-tr-lg">

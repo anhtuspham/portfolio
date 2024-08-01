@@ -19,7 +19,6 @@ function Skill() {
               </List>
               <List title="Framework & platforms">
                 <p>ReactJS, NodeJS</p>
-                <p>RestfulAPI/JSON</p>
                 <p>Firebase</p>
                 <p>Bootstrap</p>
                 <p>TailwindCSS</p>

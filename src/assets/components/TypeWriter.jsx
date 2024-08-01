@@ -54,7 +54,7 @@ export default function TypeWriter({ speed, texts }) {
   }, [speed, texts, isPause, isDeleting, currentTextIndex, displayText]);
   return (
     <div className={`${styles.typeWriter} min-h-8 `}>
-      <span className="capitalize text-xl">{displayText}</span>
+      <span className="capitalize text-xl max-md:text-base">{displayText}</span>
     </div>
   );
 }
