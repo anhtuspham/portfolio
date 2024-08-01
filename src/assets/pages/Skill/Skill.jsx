@@ -9,9 +9,9 @@ function Skill() {
         {/* Header */}
         <Header title="Skill" />
 
-        <div className="flex w-3/5 mx-auto gap-5">
-          <Board>
-            <div>
+        <div className="w-3/5 mx-auto max-xl:w-4/5">
+          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-1">
+            <Board>
               <List title="Programming languages">
                 <p>HTML, CSS</p>
                 <p>Javascript</p>
@@ -23,10 +23,8 @@ function Skill() {
                 <p>Bootstrap</p>
                 <p>TailwindCSS</p>
               </List>
-            </div>
-          </Board>
-          <Board>
-            <div>
+            </Board>
+            <Board>
               <List title="Database">
                 <p>MongoDB</p>
                 <p>MySQL</p>
@@ -38,20 +36,22 @@ function Skill() {
                 <p>Visual Studio Code</p>
                 <p>Webstorm</p>
               </List>
-            </div>
-          </Board>
-          <Board>
-            <List title="Foreign language">
-              <p>Can read, understand English</p>
-            </List>
-            <List title="Knowledge">
-              <p>
-                Good understanding software design, database design,
-                RestfulAPI,...
-              </p>
-              <p>Good time management, presentation and teamwork skills ...</p>
-            </List>
-          </Board>
+            </Board>
+            <Board>
+              <List title="Foreign language">
+                <p>Can read, understand English</p>
+              </List>
+              <List title="Knowledge">
+                <p>
+                  Good understanding software design, database design,
+                  RestfulAPI,...
+                </p>
+                <p>
+                  Good time management, presentation and teamwork skills ...
+                </p>
+              </List>
+            </Board>
+          </div>
         </div>
       </section>
     </>

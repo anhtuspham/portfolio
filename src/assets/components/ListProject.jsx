@@ -23,7 +23,7 @@ export default function ListProject({
           <li className="text-slate-600 ml-8 list-[circle]">{child}</li>
         ))}
       </ul>
-      <div className="flex justify-center gap-5">
+      <div className="flex justify-center gap-5 mt-5">
         <LinkButton
           name="Github"
           srcIcon={faGithub}
