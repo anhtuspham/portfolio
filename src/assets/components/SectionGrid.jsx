@@ -6,7 +6,7 @@ export default function SectionGrid({ children }) {
   console.log(childrenCount);
   return (
     <>
-      <div className="w-3/5 mx-auto max-xl:w-4/5">
+      <div className="w-3/5 mx-auto max-[1440px]:w-4/5">
         <div
           className={`grid grid-cols-${childrenCount} gap-5 max-lg:grid-cols-${
             childrenCount >= 3 ? childrenCount - 1 : "2"
