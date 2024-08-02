@@ -4,13 +4,22 @@ import styles from "./SectionGrid.module.css";
 export default function SectionGrid({ children, title }) {
   let childrenCount = Children.count(children);
   console.log(title, childrenCount);
+  let gridColsClass = () => {
+    if (childrenCount >= 3) {
+      return "grid-cols-3";
+    } else if (childrenCount === 2) {
+      return "grid-cols-2";
+    } else {
+      return "grid-cols-1";
+    }
+  };
   return (
     <>
       <div className="w-3/5 mx-auto max-[1440px]:w-4/5">
         <div
-          className={`grid grid-cols-${childrenCount} gap-5 max-lg:grid-cols-${
+          className={`grid ${gridColsClass()} gap-5 max-lg:grid-cols-${
             childrenCount >= 3 ? childrenCount - 1 : "2"
-          } max-md:grid-cols-${childrenCount >= 3 ? childrenCount - 2 : "1"} `}
+          } max-md:grid-cols-1 `}
         >
           {Children.map(children, (child) => (
             <div
