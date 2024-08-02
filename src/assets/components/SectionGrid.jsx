@@ -1,9 +1,9 @@
 import { Children } from "react";
 import styles from "./SectionGrid.module.css";
 
-export default function SectionGrid({ children }) {
+export default function SectionGrid({ children, title }) {
   let childrenCount = Children.count(children);
-  console.log(childrenCount);
+  console.log(title, childrenCount);
   return (
     <>
       <div className="w-3/5 mx-auto max-[1440px]:w-4/5">

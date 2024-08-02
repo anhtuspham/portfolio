@@ -10,7 +10,7 @@ export default function Project() {
       <section id="project" className="pb-10 bg-primary">
         <Header title="Project" />
 
-        <SectionGrid>
+        <SectionGrid title="Project">
           <div>
             <ListProject
               title="Web cinematic"
