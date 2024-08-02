@@ -9,7 +9,7 @@ function Skill() {
         {/* Header */}
         <Header title="Skill" />
 
-        <SectionGrid title="Skill">
+        <SectionGrid>
           <div>
             <List title="Programming languages">
               <p>HTML, CSS</p>

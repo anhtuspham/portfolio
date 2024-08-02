@@ -1,9 +1,8 @@
 import { Children } from "react";
 import styles from "./SectionGrid.module.css";
 
-export default function SectionGrid({ children, title }) {
+export default function SectionGrid({ children }) {
   let childrenCount = Children.count(children);
-  console.log(title, childrenCount);
   let gridColsClass = () => {
     if (childrenCount >= 3) {
       return "grid-cols-3";
