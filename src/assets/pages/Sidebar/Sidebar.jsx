@@ -12,7 +12,7 @@ import styles from "./Sidebar.module.css";
 import MenuItem from "../../components/MenuItem";
 
 function Sidebar() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const [activeMenuItem, setActiveMenuItem] = useState(() => {
     return localStorage.getItem('menuItem') || 'home'
   });
