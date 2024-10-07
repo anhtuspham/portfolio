@@ -8,7 +8,7 @@ import {
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./About.module.css";
-import image from "./../../images/profile-image.jpg";
+import image from "./../../images/7755-tu.jpg";
 import cv from "./../../images/PhamAnhTu-Intership-CV.pdf";
 import Header from "../../components/Header";
 import LinkButton from "../../components/LinkButton";

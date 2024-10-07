@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import ListProject from "../../components/ListProject";
 import cinematic from "../../images/cinematic.png";
 import boilcms from "../../images/boilcms.png";
+import forecast from "../../images/forecast.png";
 import SectionGrid from "../../components/SectionGrid";
 
 export default function Project() {
@@ -68,6 +69,31 @@ export default function Project() {
                 <span className="font-bold">Technologies</span>: Front-end:
                 HTML/CSS, Vanilla Javascript, Webpack. Back-end: Nodejs,
                 Database: MongoDB
+              </p>
+            </ListProject>
+          </div>
+          <div>
+            <ListProject
+              title="Forecast"
+              linkGithub="https://github.com/anhtuspham/forecast"
+              linkDemo="https="
+              imgProject={forecast}
+              >
+                <p>
+                <span className="font-bold">Project Description</span>: Built a
+                forecast website to provide information about the current weather, weather forecast
+              </p>
+              <p>
+                <span className="font-bold">Team size</span>: 1
+              </p>
+              <p>
+                <span className="font-bold">Functionality</span>: 
+                Search for a city, get current weather information, 3-day forecast,
+                and show the weather icon, humidity, temperature, and wind speed.
+              </p>
+              <p>
+                <span className="font-bold">Technologies</span>: 
+                React, TypeScript, Axios, OpenWeatherMap API
               </p>
             </ListProject>
           </div>
