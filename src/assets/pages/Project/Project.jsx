@@ -76,7 +76,7 @@ export default function Project() {
             <ListProject
               title="Forecast"
               linkGithub="https://github.com/anhtuspham/forecast"
-              linkDemo="https="
+              linkDemo="https://forecast-anhtu.vercel.app/"
               imgProject={forecast}
               >
                 <p>
