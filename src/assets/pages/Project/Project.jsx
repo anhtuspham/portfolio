@@ -80,20 +80,18 @@ export default function Project() {
               imgProject={forecast}
               >
                 <p>
-                <span className="font-bold">Project Description</span>: Built a
-                forecast website to provide information about the current weather, weather forecast
-              </p>
-              <p>
-                <span className="font-bold">Team size</span>: 1
+                <span className="font-bold">Project Description</span>: Built a weather forecast website to 
+                provide information about current weather conditions and forecasts.
               </p>
               <p>
                 <span className="font-bold">Functionality</span>: 
-                Search for a city, get current weather information, 3-day forecast,
-                and show the weather icon, humidity, temperature, and wind speed.
+                Search for weather information by city, get current weather details, view a 3-day forecast, 
+                and display weather icons, humidity, temperature, and wind speed. 
+                The website is responsive for all devices.
               </p>
               <p>
                 <span className="font-bold">Technologies</span>: 
-                React, TypeScript, Axios, OpenWeatherMap API
+                React, TypeScript, Weather API
               </p>
             </ListProject>
           </div>
