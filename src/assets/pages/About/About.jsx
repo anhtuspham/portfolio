@@ -9,7 +9,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./About.module.css";
 import image from "./../../images/7755-tu.jpg";
-import cv from "./../../images/PhamAnhTu-Intership-CV.pdf";
+import cv from "./../../images/PhamAnhTu-CV.pdf";
 import Header from "../../components/Header";
 import LinkButton from "../../components/LinkButton";
 
@@ -30,7 +30,7 @@ function About() {
             <div className="bg-white w-full p-4 rounded-md shadow-md">
               <div className="uppercase pb-5 text-2xl">Summary</div>
               <p>
-                I'm Pham Anh Tu, a young and energetic intern develper eager to
+                I'm Pham Anh Tu, a young and energetic intern developer eager to
                 learn. I have experience working with JavaScript and ReactJS
                 through school projects and personal projects. I am passionate
                 about learning new languages and technologies.

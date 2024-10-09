@@ -26,7 +26,6 @@ function Skill() {
           <div>
             <List title="Database">
               <p>MongoDB</p>
-              <p>MySQL</p>
             </List>
             <List title="Version control">
               <p>Github</p>
